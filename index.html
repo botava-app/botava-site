@@ -25,7 +25,8 @@
         <img src="assets/logo-bot-ava.png" alt="Logo BOT AVA">
         <span>BOT <b>AVA</b></span>
       </a>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="site-menu">
         <a href="#prints">Telas</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#recursos">Recursos</a>
@@ -81,10 +82,10 @@
           <h2>Veja como o BOT AVA fica na prática</h2>
           <p>Interface escura, simples e objetiva para o aluno acompanhar tudo sem se perder no portal.</p>
         </div>
-        <div class="screens-grid">
-          <article class="screen-card screen-large">
+        <div class="screens-grid screens-grid-v2">
+          <article class="screen-card screen-wide">
             <img src="assets/screens/dashboard.png" alt="Dashboard principal do BOT AVA">
-            <div><h3>Dashboard geral</h3><p>Resumo de matérias, concluídas, pendências, certificados e andamento geral.</p></div>
+            <div><h3>Dashboard geral</h3><p>Resumo de matérias, concluídas, pendências, certificados e andamento geral em uma tela central.</p></div>
           </article>
           <article class="screen-card">
             <img src="assets/screens/disciplinas.png" alt="Lista de disciplinas no BOT AVA">
@@ -217,5 +218,25 @@
       <div><a href="termos.html">Termos de Uso</a> · <a href="privacidade.html">Privacidade</a> · <a href="suporte.html">Suporte</a></div>
     </div>
   </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('site-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.textContent = open ? '✕' : '☰';
+      });
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 980) {
+            menu.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.textContent = '☰';
+          }
+        });
+      });
+    }
+  </script>
 </body>
 </html>

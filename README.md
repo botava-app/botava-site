@@ -1,3 +1,3 @@
-# BOT AVA Site v6
+# BOT AVA Site v8
 
-Versão pública sem painel comercial interno. Download direto do instalador v1.1.3.
+Versão pública limpa, com layout responsivo desktop/mobile.

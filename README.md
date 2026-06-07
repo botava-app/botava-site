@@ -1,6 +1,3 @@
-# BOT AVA Site
+# BOT AVA Site v6
 
-Site oficial do BOT AVA para GitHub Pages.
-
-Domínio: https://botava.com.br
-API: https://api.botava.com.br
+Versão pública sem painel comercial interno. Download direto do instalador v1.1.3.

@@ -1,3 +1,1 @@
-# BOT AVA Site v8
-
-Versão pública limpa, com layout responsivo desktop/mobile.
+Site BOT AVA v9 com Open Graph/preview WhatsApp e imagem preview-botava.jpg.

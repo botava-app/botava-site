@@ -1,0 +1,10 @@
+{
+  "latest_version": "2.0.4",
+  "download_url": "https://github.com/botava-app/botava-site/releases/download/2.0.4/BOT_AVA_2.0.4.zip",
+  "sha256": "a3adfec8e49d5d92337e58f192512aac81c785e6c6e7330f2ae3bde971cf82f4",
+  "notes": [
+    "Chrome oculto por padrão.",
+    "Correção do carregamento da interface no Windows.",
+    "Correção da verificação de data de liberação das unidades."
+  ]
+}

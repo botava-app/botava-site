@@ -109,7 +109,7 @@
       button.textContent = quoteToken ? 'Continuar para o pagamento →' : 'Confirmar valor';
     }
   });
-  const returnMatch = location.hash.match(/^#pagamento=([A-Za-z0-9_.-]+)$/);
+  const returnMatch = location.hash.match(/^#pagamento=([A-Za-z0-9_.-]+)(?:[?&].*)?$/);
   if (returnMatch) {
     const returnDialog = document.getElementById('payment-return');
     const statusText = document.getElementById('payment-status');

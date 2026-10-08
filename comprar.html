@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOT AVA | Conheça, escolha seu plano e comece</title>
+  <meta name="description" content="BOT AVA para Windows. Compare os planos semestral e anual e escolha Pix ou cartão em até 6x com juros.">
+  <meta name="theme-color" content="#111315">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="assets/landing.css">
+  <script src="assets/landing.js" defer></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="./"><img src="assets/logo-bot-ava.png" alt="" width="36" height="36">BOT <span>AVA</span></a><nav aria-label="Principal"><a href="#planos">Planos</a><a href="#duvidas">Dúvidas</a><a href="suporte.html">Suporte</a></nav><a class="button compact" href="#planos">Escolher plano</a></header>
+  <main>
+    <section class="hero">
+      <img class="hero-image" src="assets/screens/dashboard.png" alt="Painel real do BOT AVA com disciplinas e progresso">
+      <div class="hero-copy"><p class="eyebrow">PARA WINDOWS · PORTAL AVAEDUC</p><h1>BOT AVA</h1><p class="hero-lead">Seu presencial já tem uma rotina cheia.<br>Automatize as atividades do AVA.</p><a class="button" href="#planos">Escolher meu plano <span aria-hidden="true">↓</span></a><p class="independent">Ferramenta independente, sem vínculo com sua faculdade.</p></div>
+    </section>
+    <section class="plans section" id="planos"><div class="section-heading"><p class="eyebrow">ESCOLHA SEU PERÍODO</p><h2>Um plano para a sua rotina.</h2><p>Oferta de primeira compra no Pix, sujeita à confirmação pelo CPF.</p></div>
+      <div class="plan-grid">
+        <article class="plan"><p class="plan-label">UM CICLO ACADÊMICO</p><h3>Semestral</h3><p>Acesso ao ciclo acadêmico semestral vigente.</p><p class="original">Preço oficial no Pix: R$ 199,00</p><p class="price">R$ 149<span>,00</span></p><p class="price-note">na primeira compra via Pix</p><ul><li>Dashboard e disciplinas</li><li>Automação de atividades compatíveis</li><li>Atualizações e suporte</li></ul><button class="button" data-plan="semester">Escolher semestral <span aria-hidden="true">→</span></button><p class="card-note">Cartão: preço e parcelas na próxima etapa.</p></article>
+        <article class="plan annual"><p class="plan-label">DOIS CICLOS ACADÊMICOS</p><h3>Anual</h3><p>Acesso a dois ciclos acadêmicos consecutivos.</p><p class="original">Preço oficial no Pix: R$ 299,99</p><p class="price">R$ 249<span>,99</span></p><p class="price-note">na primeira compra via Pix</p><ul><li>Dashboard e disciplinas</li><li>Automação de atividades compatíveis</li><li>Atualizações e suporte</li></ul><button class="button" data-plan="annual">Escolher anual <span aria-hidden="true">→</span></button><p class="card-note">Cartão: preço e parcelas na próxima etapa.</p></article>
+      </div><p class="payment-note">Pix à vista ou cartão em até 6x com juros para o comprador. As opções e o total do cartão são confirmados no checkout.</p>
+    </section>
+    <section class="section faq" id="duvidas"><div class="section-heading"><p class="eyebrow">ANTES DE COMEÇAR</p><h2>Suas dúvidas, respondidas.</h2></div><div class="questions">
+      <details><summary>Funciona na minha faculdade?</summary><p>O BOT AVA atende ao portal AVAEDUC compatível. O nome da faculdade, sozinho, não garante compatibilidade. <a href="suporte.html">Confirme com o suporte</a> antes de comprar.</p></details>
+      <details><summary>Posso usar pelo celular?</summary><p>Você pode acessar esta página e pagar pelo celular. O BOT AVA é um aplicativo para Windows: a execução acontece no computador, que precisa ficar ligado e conectado.</p></details>
+      <details><summary>Quando começa e termina o acesso?</summary><p>O semestral cobre o ciclo acadêmico vigente; o anual cobre dois ciclos consecutivos. Confira as datas apresentadas antes de confirmar a compra.</p></details>
+      <details><summary>Como funciona a primeira compra?</summary><p>O desconto é exclusivo do Pix e depende de não existir pagamento anterior aprovado para o CPF. O valor exato é confirmado antes de abrir o pagamento.</p></details>
+      <details><summary>O cartão tem renovação automática?</summary><p>A compra do site é única, mesmo quando parcelada. As parcelas não representam uma assinatura com renovação automática.</p></details>
+      <details><summary>Como recebo o acesso?</summary><p>Após a confirmação do pagamento, a licença é vinculada ao CPF usado na compra. Instale o BOT AVA no Windows e utilize o mesmo CPF. Se precisar de ajuda, fale com o suporte.</p></details>
+    </div></section>
+    <section class="support section"><h2>Precisa confirmar seu portal?</h2><a class="button secondary" href="https://wa.me/5594920007324?text=Quero%20confirmar%20a%20compatibilidade%20do%20meu%20portal%20com%20o%20BOT%20AVA" target="_blank" rel="noopener">Falar com o suporte ↗</a></section>
+  </main>
+  <footer><a class="brand" href="./">BOT <span>AVA</span></a><p>Ferramenta independente. Utilize conforme as regras da sua instituição.</p><div><a href="termos.html">Termos</a><a href="privacidade.html">Privacidade</a><a href="suporte.html">Suporte</a></div></footer>
+  <dialog id="checkout"><form id="checkout-form"><div class="dialog-head"><span class="eyebrow">SUA COMPRA</span><button type="button" id="close-checkout" class="close" aria-label="Fechar">×</button></div><h2 id="checkout-title">Plano Semestral</h2><p>Preencha seus dados para confirmar o valor e continuar.</p><label>Nome completo<input name="name" autocomplete="name" required minlength="3" maxlength="120"></label><div class="form-row"><label>CPF<input name="cpf" inputmode="numeric" autocomplete="off" required maxlength="14"></label><label>WhatsApp<input name="phone" type="tel" autocomplete="tel" required maxlength="20"></label></div><label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="180"></label><fieldset><legend>Forma de pagamento</legend><label class="method"><input type="radio" name="method" value="pix" checked> Pix à vista</label><label class="method"><input type="radio" name="method" value="card"> Cartão em até 6x com juros</label></fieldset><label class="consent"><input type="checkbox" name="accepted" required><span>Li os <a href="termos.html" target="_blank" rel="noopener">termos</a> e a <a href="privacidade.html" target="_blank" rel="noopener">política de privacidade</a> e confirmei a compatibilidade do meu portal.</span></label><div id="quote" hidden aria-live="polite"></div><p id="checkout-error" role="alert"></p><button class="button" id="checkout-submit" type="submit">Confirmar valor</button><p class="secure-note">Pagamento no ambiente do Mercado Pago. Não pedimos a senha da sua faculdade.</p></form></dialog>
+  <dialog id="payment-return"><h2>Consulte seu pagamento</h2><p id="payment-status" role="status">Consultando a confirmação…</p><a id="download-link" class="button" href="https://github.com/botava-app/botava-site/releases/download/2.0.4/Instalador_BOT_AVA_2.0.4.exe" hidden>Baixar BOT AVA para Windows</a><button class="button secondary" id="close-return">Voltar à página</button></dialog>
+</body>
+</html>

@@ -95,7 +95,7 @@
           if (iso.length === 3) period.textContent += ' · Acesso até ' + iso.reverse().join('/');
         }
         const method = document.createElement('p');
-        method.textContent = result.method === 'card' ? 'Compra única em até 6x. Confira as parcelas, os juros e o total nos campos seguros abaixo antes de pagar.' : 'Pagamento único via Pix.' + (result.promotion ? ' Oferta de primeira compra aplicada.' : ' Preço oficial aplicado.');
+        method.textContent = result.method === 'card' ? 'Compra única. Confira o valor de cada parcela e o total antes de pagar.' + (result.promotion ? ' Oferta de primeira compra aplicada.' : '') : 'Pagamento único via Pix.' + (result.promotion ? ' Oferta de primeira compra aplicada.' : ' Preço oficial aplicado.');
         summary.replaceChildren(title, period, method);
         summary.hidden = false;
         summary.scrollIntoView({block: 'nearest'});

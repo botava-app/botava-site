@@ -6,6 +6,7 @@
   const button = document.getElementById('checkout-submit');
   const error = document.getElementById('checkout-error');
   const summary = document.getElementById('quote');
+  document.querySelector('.secure-note').textContent = 'Pagamento protegido pelo Mercado Pago. Não pedimos a senha da sua faculdade.';
   let plan = 'semester';
   let quoteToken = null;
   let busy = false;
@@ -77,10 +78,11 @@
     button.textContent = quoteToken ? 'Abrindo pagamento…' : 'Confirmando valor…';
     try {
       if (quoteToken) {
-        const result = await api('/checkout', {token: quoteToken});
-        const target = new URL(result.url);
-        if (target.protocol !== 'https:' || !target.hostname.endsWith('.mercadopago.com.br')) throw new Error('Não foi possível validar o endereço do pagamento.');
-        location.assign(target.href);
+        if (window.BotAvaPayment) {
+          await window.BotAvaPayment.open({api, token: quoteToken, dialog, form, onClose: resetQuote});
+        } else {
+          throw new Error('Atualize esta página para carregar o novo pagamento integrado.');
+        }
       } else {
         const result = await api('/quote', {plan, method: values.get('method'), cpf: values.get('cpf'), name: values.get('name'), email: values.get('email'), phone: values.get('phone'), accepted: values.get('accepted') === 'on', attribution, lead_token: leadToken});
         quoteToken = result.token;
@@ -93,7 +95,7 @@
           if (iso.length === 3) period.textContent += ' · Acesso até ' + iso.reverse().join('/');
         }
         const method = document.createElement('p');
-        method.textContent = result.method === 'card' ? 'Compra única em até 6x. Juros, parcelas disponíveis e total final serão exibidos no Mercado Pago antes do pagamento.' : 'Pagamento único via Pix.' + (result.promotion ? ' Oferta de primeira compra aplicada.' : ' Preço oficial aplicado.');
+        method.textContent = result.method === 'card' ? 'Compra única em até 6x. Confira as parcelas, os juros e o total nos campos seguros abaixo antes de pagar.' : 'Pagamento único via Pix.' + (result.promotion ? ' Oferta de primeira compra aplicada.' : ' Preço oficial aplicado.');
         summary.replaceChildren(title, period, method);
         summary.hidden = false;
         summary.scrollIntoView({block: 'nearest'});
